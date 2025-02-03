@@ -1,0 +1,25 @@
+
+<div class="col-md-4 offset-md-4" >
+    <div class="shadow-lg mb-5 bg-white mt-5">
+      <h5 class="card-header tblHeaderBlue d-flex justify-content-start" style="background-color: blueviolet;">Task Management Login</h5>
+      <div class="card-body mt-3 ">
+        <form [formGroup]="loginForm">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" class="form-control form-control-sm" id="username" placeholder="Enter username " formControlName="username">
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="text" class="form-control form-control-sm" id="password" placeholder="Enter password" formControlName="password">
+          </div>
+          <button type="button" class="btn btn-success" (click)="login()">Login</button>
+          <button type="button" class="btn btn-primary" style="margin-left: 20px;" (click)="navigateToRegisterUser()">
+            Sign Up
+          </button>
+          
+        
+        </form>
+      </div>
+    
+    </div>
+      

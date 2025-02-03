@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormControl, FormBuilder, Validators} from '@angular/forms';
 import { RegisterUserDto } from './register-user.dto';
 import { RegisterUserService } from './register-user.service';
+import { Route, Router } from '@angular/router';
 
 
 @Component({
@@ -16,7 +17,8 @@ export class RegisterUserComponent implements OnInit {
 
   constructor(
     private formBuilder : FormBuilder,
-    private registerUserService : RegisterUserService
+    private registerUserService : RegisterUserService,
+    private router : Router
 
   ) { }
 
@@ -51,6 +53,10 @@ export class RegisterUserComponent implements OnInit {
       this.registerUserService.getAllRegisterUser().subscribe(res =>{
         console.log(res['data']);
       })
+    }
+
+    loginPage(){
+     this.router.navigate(['/login']);
     }
  
 }
